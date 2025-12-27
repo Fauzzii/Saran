@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <input type="text" id="number" placeholder="Masukan Angka" />
+
+    <script>
+        const InputText = document.getElementById('number');
+        let ValueText = '';
+
+        InputText.addEventListener('input', function (e) {
+            const regex = /^[0-9]*$/;
+            const value = e.target.value;
+
+            if (regex.test(value)) {
+                ValueText = value;
+            } else {
+                e.target.value = ValueText;
+            }
+        });
+
+        InputText = ValueText;
+
+    </script>
+</body>
+
+</html>
